@@ -6,7 +6,7 @@
 /*   By: kshore <kshore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 01:00:17 by kshore            #+#    #+#             */
-/*   Updated: 2023/08/12 02:43:15 by kshore           ###   ########.fr       */
+/*   Updated: 2023/08/12 02:50:26 by kshore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ char	**ft_split(const char *str, char c)
 
 	j = 0;
 	i = 0;
-	if (ft_strchr(str, c) == NULL)
-		return ((char **)str);
+	if (str == NULL)
+		return (NULL);
 	sub_strings = (char **) malloc(sizeof(char *) * \
-	(count_words((char *)str, c)) + 1);
+	(count_words((char *)str, c) + 1));
 	if (sub_strings == NULL)
 		return (NULL);
 	while (str[j] != '\0')
