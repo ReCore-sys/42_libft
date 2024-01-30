@@ -14,16 +14,16 @@ targets := $(files:%.c=%)
 Compiler = cc
 
 # Compiler flags for the compilation process
-CmpFlags = -Wall -Wextra -Werror
+CmpFlags = -g -Wall -Wextra -Werror
 
 # Output name for the static library
 OUTN = $(Library).a
 
 # List of source files with ".c" extension
-CFILES = $(targets:%=%.c)
+CFILES := $(targets:%=%.c)
 
 # List of object files with ".o" extension (generated from C source files)
-OFILES = $(targets:%=%.o)
+OFILES := $(targets:%=%.o)
 
 # Target name for the final library file
 NAME = libft.a
