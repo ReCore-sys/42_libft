@@ -6,7 +6,7 @@
 /*   By: kshore <kshore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:02:58 by kshore            #+#    #+#             */
-/*   Updated: 2023/11/24 01:45:28 by kshore           ###   ########.fr       */
+/*   Updated: 2024/02/17 22:03:07 by kshore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,3 +106,4 @@ int			ft_putnbr(int nb);
 int			ft_hexlower(unsigned int nb);
 int			ft_hexupper(unsigned int nb);
 int			ft_pointer(unsigned long ptr);
+int			ft_printf(const char *format, ...);
