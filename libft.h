@@ -90,6 +90,7 @@ void		ft_vec_insert(t_vec *vec, size_t index, void *data);
 void		ft_vec_reverse(t_vec *vec);
 void		ft_vec_sort(t_vec *vec, int (*cmp)(const void *, const void *));
 void		ft_vec_prepend(t_vec *vec, void *data);
+void		ft_vec_set(t_vec *vec, size_t index, void *data);
 t_hashmap	*hashmap_new(void);
 void		hm_add(t_hashmap *hashmap, const char *key, void *value);
 void		*hm_get(t_hashmap *hashmap, const char *key);

@@ -6,7 +6,7 @@
 /*   By: kshore <kshore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 17:42:17 by kshore            #+#    #+#             */
-/*   Updated: 2024/01/31 01:22:04 by kshore           ###   ########.fr       */
+/*   Updated: 2024/04/25 18:40:55 by kshore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,23 @@ void	ft_vec_prepend(t_vec *vec, void *data)
 	ft_memmove(vec->data + 1, vec->data, sizeof(void *) * vec->size);
 	vec->data[0] = data;
 	vec->size++;
+}
+
+
+
+/**
+ * Sets the value at the specified index in the given vector.
+ *
+ * @param vec   The vector to modify.
+ * @param index The index at which to set the value.
+ * @param data  The data to set at the specified index.
+ */
+void	ft_vec_set(t_vec *vec, size_t index, void *data)
+{
+	if (index >= vec->size)
+	{
+		ft_putendl_fd("Index out of bounds", 2);
+		exit(1);
+	}
+	vec->data[index] = data;
 }
